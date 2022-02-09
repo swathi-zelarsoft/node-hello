@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-deploy
-  labels:
-    app: node
+  name: node-js
 spec:
   replicas: 2
+  revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: node
+      app: node-js
   template:
     metadata:
       labels:
-        app: node
+        app: node-js
     spec:
       containers:
-      - name: node-1
-        image: swathipottabathini/simple
+      - image: swathipottabathini/simple
+        name: node-js
         ports:
         - containerPort: 80
+

@@ -6,7 +6,7 @@ spec:
   containers:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:latest
-    args: ["--context=git://github.com/swathi-zelarsoft/node-hello.git",
+    args: ["--context=git://github.com/swathi-zelarsoft/node-hello",
             "--destination=swathipottabathini/kaniko"] 
   restartPolicy: Never
   volumes:

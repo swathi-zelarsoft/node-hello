@@ -6,7 +6,8 @@ spec:
   containers:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:latest
-    args: ["--context=git://github.com/swathi-zelarsoft/nodejs-welcome",
+    args: ["--dockerfile=./DOCKERFILE",
+           "--context=git://github.com/swathi-zelarsoft/node",
             "--destination=swathipottabathini/kaniko"]
     volumeMounts:
       - name: kaniko-secret

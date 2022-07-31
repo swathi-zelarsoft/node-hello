@@ -14,7 +14,7 @@ spec:
         app: nodejs
     spec:
       containers:
-      - image: swathipottabathini/simple
+      - image: swathipottabathini/hello
         name: nodejs
         ports:
         - containerPort: 80
